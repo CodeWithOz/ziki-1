@@ -1,5 +1,16 @@
 {% set title = "Tags" %} {% extends 'layout.html' %} {% block page_content %}
 <style>
+  :root {
+    /* colors to use */
+    --ziki-purple: #280a66;
+    --ziki-white: #fff;
+    --ziki-gray: #888;
+
+    /* light mode */
+    --blog-date-text-color: var(--ziki-purple);
+    --blog-preview-text-color: var(--ziki-gray);
+  }
+
   .one {
     background-color: red;
     height: 100vh;
@@ -12,6 +23,19 @@
   .img-container {
     background: url('/resources/themes/ghost/assets/img/active.jpg') no-repeat
       center / cover;
+  }
+
+  .blog-date {
+    color: var(--blog-date-text-color);
+    font-size: 0.8em;
+  }
+
+  .blog-title {
+    font-weight: bold;
+  }
+
+  .blog-preview {
+    color: var(--blog-preview-text-color);
   }
 
   .second {
