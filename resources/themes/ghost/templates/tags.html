@@ -1,103 +1,80 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Lucid</title>
+{% set title = "Tags" %} {% extends 'layout.html' %} {% block page_content %}
+<style>
+  .one {
+    background-color: red;
+    height: 100vh;
+  }
 
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <!-- <link rel="stylesheet" href="style.css"> -->
-    <link
-      rel="stylesheet"
-      href="./vendors/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css"
-    />
-  </head>
-  <style>
-    .one {
-      background-color: red;
-      height: 100vh;
-    }
+  .main-content {
+    min-height: 100vh;
+  }
 
-    .main-content {
-      min-height: 100vh;
-    }
+  .img-container {
+    background: url('/resources/themes/ghost/assets/img/active.jpg') no-repeat
+      center / cover;
+  }
 
-    .img-container {
-      background: url('/resources/themes/ghost/assets/img/active.jpg') no-repeat
-        center / cover;
-    }
+  .second {
+    background-color: blue;
+    height: 25vh;
+  }
+</style>
 
-    .second {
-      background-color: blue;
-      height: 25vh;
-    }
-  </style>
+<div class="row">
+  <div class="col-12 col-sm-3 one">Sidebar</div>
 
-  <body>
-    <div class="container-fluid them">
-      <div class="row">
-        <div class="col-12 col-sm-3 one">Sidebar</div>
+  <div class="col-12 col-sm-9 main-content p-5">
+    <div class="row">
+      <div class="col-12">
+        <div class="row pt-4 pb-4">
+          <div class="col-3 img-container"></div>
+          <div class="col-8">
+            <p class="blog-date">2nd April 2019</p>
+            <h3 class="blog-title">
+              What I think of Donald Glover's New Video
+            </h3>
+            <p class="blog-preview">
+              I assume you only want the dots to appear in red? Unfortunately
+              this isn't possible with simple css. However I found a tutorial
+              which manages to make a custom ellipsis style, that will only be
+              displayed when it's necessary:
+            </p>
+          </div>
+        </div>
 
-        <div class="col-12 col-sm-9 main-content p-5">
-          <div class="row">
-            <div class="col-12">
-              <div class="row pt-4 pb-4">
-                <div class="col-3 img-container"></div>
-                <div class="col-8">
-                  <p class="blog-date">2nd April 2019</p>
-                  <h3 class="blog-title">
-                    What I think of Donald Glover's New Video
-                  </h3>
-                  <p class="blog-preview">
-                    I assume you only want the dots to appear in red?
-                    Unfortunately this isn't possible with simple css. However I
-                    found a tutorial which manages to make a custom ellipsis
-                    style, that will only be displayed when it's necessary:
-                  </p>
-                </div>
-              </div>
+        <div class="row pt-4 pb-4">
+          <div class="col-3 img-container"></div>
+          <div class="col-8">
+            <p class="blog-date">2nd April 2019</p>
+            <h3 class="blog-title">
+              What I think of Donald Glover's New Video
+            </h3>
+            <p class="blog-preview">
+              I assume you only want the dots to appear in red? Unfortunately
+              this isn't possible with simple css. However I found a tutorial
+              which manages to make a custom ellipsis style, that will only be
+              displayed when it's necessary:
+            </p>
+          </div>
+        </div>
 
-              <div class="row pt-4 pb-4">
-                <div class="col-3 img-container"></div>
-                <div class="col-8">
-                  <p class="blog-date">2nd April 2019</p>
-                  <h3 class="blog-title">
-                    What I think of Donald Glover's New Video
-                  </h3>
-                  <p class="blog-preview">
-                    I assume you only want the dots to appear in red?
-                    Unfortunately this isn't possible with simple css. However I
-                    found a tutorial which manages to make a custom ellipsis
-                    style, that will only be displayed when it's necessary:
-                  </p>
-                </div>
-              </div>
-
-              <div class="row pt-4 pb-4">
-                <div class="col-3 img-container"></div>
-                <div class="col-8">
-                  <p class="blog-date">2nd April 2019</p>
-                  <h3 class="blog-title">
-                    What I think of Donald Glover's New Video
-                  </h3>
-                  <p class="blog-preview">
-                    I assume you only want the dots to appear in red?
-                    Unfortunately this isn't possible with simple css. However I
-                    found a tutorial which manages to make a custom ellipsis
-                    style, that will only be displayed when it's necessary:
-                  </p>
-                </div>
-              </div>
-            </div>
+        <div class="row pt-4 pb-4">
+          <div class="col-3 img-container"></div>
+          <div class="col-8">
+            <p class="blog-date">2nd April 2019</p>
+            <h3 class="blog-title">
+              What I think of Donald Glover's New Video
+            </h3>
+            <p class="blog-preview">
+              I assume you only want the dots to appear in red? Unfortunately
+              this isn't possible with simple css. However I found a tutorial
+              which manages to make a custom ellipsis style, that will only be
+              displayed when it's necessary:
+            </p>
           </div>
         </div>
       </div>
     </div>
-    <script src="vendors/jquery.min.js"></script>
-    <script src="vendors/bootstrap-4.0.0-beta.3-dist/js/bootstrap.min.js"></script>
-  </body>
-</html>
+  </div>
+</div>
+{% endblock page_content %}
