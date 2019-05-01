@@ -5,14 +5,27 @@
     --ziki-purple: #280a66;
     --ziki-white: #fff;
     --ziki-gray: #888;
+    --ziki-alt-black: #202020;
+    --ziki-black: #000;
 
     /* light mode */
+    --main-bg-color: var(--ziki-white);
+    --main-text-color: var(--ziki-black);
     --blog-date-text-color: var(--ziki-purple);
     --blog-preview-text-color: var(--ziki-gray);
   }
 
+  .dark {
+    --main-bg-color: var(--ziki-alt-black);
+    --main-text-color: var(--ziki-white);
+    --blog-date-text-color: var(--ziki-white);
+    --blog-preview-text-color: var(--ziki-white);
+  }
+
   .main-content {
     min-height: 100vh;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
   }
 
   .img-container {
