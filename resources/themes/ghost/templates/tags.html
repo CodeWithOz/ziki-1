@@ -74,53 +74,20 @@ page_content %}
     </div>
     <div class="row">
       <div class="col-12">
+        {% for key, feed in posts %}
         <div class="row pt-4 pb-4">
           <div class="col-3 img-container"></div>
           <div class="col-8">
-            <p class="blog-date">2nd April 2019</p>
-            <h3 class="blog-title font-weight-bold">
-              What I think of Donald Glover's New Video
-            </h3>
-            <p class="blog-preview">
-              I assume you only want the dots to appear in red? Unfortunately
-              this isn't possible with simple css. However I found a tutorial
-              which manages to make a custom ellipsis style, that will only be
-              displayed when it's necessary:
+            <p class="blog-date">
+              {{ feed.timestamp | striptags | date("jS M Y") }}
             </p>
+            <h3 class="blog-title font-weight-bold">
+              <a href="/blog-details/{{ feed.slug }}">{{ feed.title | raw }}</a>
+            </h3>
+            <div class="blog-preview">{{ feed.body | raw }}</div>
           </div>
         </div>
-
-        <div class="row pt-4 pb-4">
-          <div class="col-3 img-container"></div>
-          <div class="col-8">
-            <p class="blog-date">2nd April 2019</p>
-            <h3 class="blog-title font-weight-bold">
-              What I think of Donald Glover's New Video
-            </h3>
-            <p class="blog-preview">
-              I assume you only want the dots to appear in red? Unfortunately
-              this isn't possible with simple css. However I found a tutorial
-              which manages to make a custom ellipsis style, that will only be
-              displayed when it's necessary:
-            </p>
-          </div>
-        </div>
-
-        <div class="row pt-4 pb-4">
-          <div class="col-3 img-container"></div>
-          <div class="col-8">
-            <p class="blog-date">2nd April 2019</p>
-            <h3 class="blog-title font-weight-bold">
-              What I think of Donald Glover's New Video
-            </h3>
-            <p class="blog-preview">
-              I assume you only want the dots to appear in red? Unfortunately
-              this isn't possible with simple css. However I found a tutorial
-              which manages to make a custom ellipsis style, that will only be
-              displayed when it's necessary:
-            </p>
-          </div>
-        </div>
+        {% endfor %}
       </div>
     </div>
   </div>
