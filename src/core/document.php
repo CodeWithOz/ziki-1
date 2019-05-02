@@ -420,6 +420,7 @@ public function update($id)
                     $parsedown  = new Parsedown();
                         $tags = $yaml['tags'];
                        for($i = 0; $i<count($tags); $i++){
+                            // strip away the leading "#" of the tag name
                             if(substr($tags[$i], 1) == $id){
                             $slug = $parsedown->text($yaml['slug']);
                             $title = $parsedown->text($yaml['title']);
@@ -430,8 +431,8 @@ public function update($id)
                             $content['body'] = $bd;
                             $content['url'] = $url;
                             $content['timestamp'] = $time;
+                            $content['tags'] = $tags;
                             array_push($posts, $content);
-                            array_push($posts,$tags);
                             }
                         }
 
